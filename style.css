@@ -1,0 +1,116 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Arimo", sans-serif;
+  box-sizing: border-box;
+}
+
+.work {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.work__heading {
+  color: #1a0a3b;
+  font-weight: 500;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+.work__heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4rem;
+  height: 6px;
+  border-radius: 2rem;
+  background-color: #006400;
+}
+.work__filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.work__filter .work-tab {
+  display: flex;
+}
+.work__filter .work-tab__item {
+  cursor: pointer;
+  padding: 1rem 1.5rem;
+  border: 1px solid #006400;
+  text-align: center;
+  border-radius: 2rem 0 2rem 2rem;
+  transition: all 0.25s ease-in;
+}
+.work__filter .work-tab__item:hover {
+  background-color: #006400;
+  color: white;
+}
+.work__filter .work-tab__item:not(:first-child) {
+  margin-left: 1rem;
+}
+.work__filter .work__all {
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px;
+  color: #006400;
+  font-size: 1.4rem;
+  border-radius: 2rem;
+  background-color: rgba(0, 100, 0, 0.25);
+  transition: all 0.25s ease-in;
+}
+.work__filter .work__all:hover {
+  background-color: #006400;
+  color: white;
+}
+.work__list {
+  display: flex;
+  margin-left: -1.5rem;
+}
+.work__list .work__item {
+  width: calc(25% - 1.5rem);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 1.5rem;
+}
+.work__list .work__item .work__img {
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+@media only screen and (max-width: 1023px) {
+  .work .work__list {
+    flex-wrap: wrap;
+  }
+  .work .work__list .work__item {
+    width: calc(50% - 1.5rem);
+    margin-bottom: 1.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .work .work__list {
+    flex-wrap: wrap;
+  }
+  .work .work__list .work__item {
+    width: calc(100% - 1.5rem);
+  }
+  .work .work__filter {
+    flex-direction: column;
+  }
+  .work .work__filter .work-tab {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .work .work__filter .work-tab .work-tab__item {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
